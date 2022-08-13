@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+     <link rel="stylesheet" th:href="@{css/style.css}">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+<style>
+.menu{
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 78.5vh;
+animation: slide 10s infinite;
+background-color: rgba(0, 0,0,0.3);
+}
+.content{
+width: 100%;
+height: 100%;
+}
+@keyframes slide{
+0%{
+background-image: url(images/depositphotos-restaurant.jpeg);
+}
+20%{
+background-image: url(images/depositphotos-restaurant.jpeg);
+}
+20.01%{
+background-image: url(images/couverts-reglage.webp);
+}
+40%{
+background-image: url(images/couverts-reglage.webp);
+}
+40.01%{
+background-image: url(images/DSC_0147.jpeg);
+}
+60%{
+background-image: url(images/DSC_0147.jpeg);
+}
+60.01%{
+background-image: url(images/resto.webp);
+}
+80%{
+background-image: url(images/resto.webp);
+}
+80.01%{
+background-image: url(images/la-réserve-paris-bibliothèque-grégoire-gardette-4-768x512.jpg.webp);
+}
+100%{
+background-image: url(images/la-réserve-paris-bibliothèque-grégoire-gardette-4-768x512.jpg.webp);
+}
+
+}
+.head-gauche{
+color: white;
+margin-left: 10px;
+}
+.head-droite{
+color: white;
+margin-right: 10px;
+}
+.heads{
+display: flex;
+justify-content: space-between;
+}
+.navbar-brand{
+color: white;
+}
+.navbar{
+background: transparent;
+color: white;
+border: 2px solid white;
+border-left: none;
+border-right: none;
+justify-content: space-between;
+}
+* {
+box-sizing:border-box;
+}
+.nav-link{
+color: white;
+}
+#acc{
+color: white;
+margin-left: 370px;
+}
+.disp{
+display: flex;
+margin-top: 140px;
+
+}
+.phones{
+background-color: #C03027;
+transform: rotate(-90deg);
+color: white;
+}
+.sen{
+color: white;
+}
+.text{
+color: white;
+}
+.dep{
+margin-left: 250px;
+justify-content: center;
+text-align: center;
+
+}
+.flexable{
+justify-content: space-between;
+padding: 2%;
+margin: 5%;
+display: flex;
+}
+.bouton-haut{
+background-color: #C03027;
+text-decoration: none;
+color: white;
+border: 2px solid white;
+width: 300px;
+height: 60px;
+border-radius-top-left: 30%;
+padding: 2%;
+margin: 5%;
+}
+.bouton-bas{
+background: none;
+text-decoration: none;
+color: white;
+width: 300px;
+height: 60px;
+padding: 2%;
+margin: 5%;
+cursor: pointer;
+broder: 2px solid white;
+}
+.bouton-bas:hover{
+background-color: #FFE747;
+color: white;
+text-decoration: none;
+border: 2px solid white;
+}
+.divi{
+display: flex;
+justify-content: space-between;
+text-align: center;
+margin-top: 50px;
+}
+.color{
+color: white;
+background-color: #C03027;
+width: 160px;
+margin-left: 250px;
+margin-top: 50px;
+border: 2px solid #C03027;
+border-radius: 20px;
+}
+.lore{
+margin-left: 10px;
+}
+.min{
+display: flex;
+margin-right: 100px;
+}
+.image{
+width: 200px;
+height: 200px;
+padding: 3%;
+}
+.droit{
+display: flex;
+}
+.imas{
+margin-left: 200px;
+}
+.ima{
+margin-right: 10px;
+}
+.bnt{
+background: none;
+text-decoration: none;
+color: #FFE747;
+width: 300px;
+height: 60px;
+border: 2px solid #FFE747;
+}
+.bnt:hover{
+background-color: #FFE747;
+color: white;
+text-decoration: none;
+border: 2px solid white;
+}
+.just{
+justify-content: center;
+text-align: center;
+}
+.burgers{
+margin-top: 100px;
+}
+.justes{
+color: white;
+background-color: #C03027;
+width: 260px;
+border: 2px solid #C03027;
+border-radius: 20px;
+margin-left: 600px;
+}
+.load{
+animation: slide 2s;
+}
+.btn{
+color: white;
+}
+.innert{
+display: flex;
+}
+.prix{
+background-color: #FFE747;
+width: 100px;
+height: 40px;
+margin-left: 60px;
+justify-content: center;
+text-align: center;
+}
+.div-interne-droite{
+margin-left: 30px;
+background: #EBEBEB;
+width: 40%;
+margin: 3%;
+padding: 2%;
+}
+
+.div-interne-gauche{
+margin-left: 30px;
+background: #EBEBEB;
+width: 40%;
+margin: 3%;
+padding: 2%;
+}
+.vet{
+color: #C03027;
+}
+.lin-det-aj{
+display: flex;
+justify-content: center;
+text-align: center;
+}
+.det{
+text-decoration: none;
+margin: 3%;
+padding: 2%;
+color: white;
+background-color: #FFE747;
+}
+.aj{
+text-decoration: none;
+margin: 3%;
+padding: 2%;
+color: white;
+background-color: #C03027;
+}
+.aj:hover{
+background-color: #FFE747;
+color: white;
+text-decoration: none;
+}
+.det:hover{
+background-color: #C03027;
+color: white;
+text-decoration: none;
+}
+.div-bas{
+display: flex;
+justify-content: space-between;
+}
+.depla{
+margin-left: 820px;
+margin-top: -300px;
+}
+.mens{
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 230.5vh;
+background-image: url(images/98570daae63ffe599380b0e4b0df7e1513dbb0b8_restaurant-carousel-1.jpeg)
+}
+
+.but{
+text-decoration: none;
+margin: 3%;
+padding: 2%;
+color: white;
+background-color: #FFE747;
+}
+.butn{
+text-decoration: none;
+margin: 3%;
+padding: 2%;
+color: white;
+background-color: #C03027;
+}
+.butn:hover{
+background-color: #FFE747;
+color: white;
+text-decoration: none;
+}
+.but:hover{
+background-color: #C03027;
+color: white;
+text-decoration: none;
+}
+.lien-lier{
+display: flex;
+justify-content: space-between;
+}
+.player{
+display: flex;
+}
+.editer{
+color: white;
+background-color: #C03027;
+width: 160px;
+margin-left: 460px;
+margin-top: 50px;
+border: 2px solid #C03027;
+border-radius: 20px;
+}
+.edit{
+padding: 1%;
+}
+.mareg{
+margin-left: 460px;
+color: white;
+}
+select{
+background-color: #C03027;
+margin-left: 260px;
+margin-top: 20px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+
+  margin-left: 460px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.naviguer{
+border-bottom: 2px solid #C03027;
+}
+.tasty{
+justify-content: center;
+text-align: center;
+color: white;
+background-color: #C03027;
+width: 260px;
+margin-left: 500px;
+border: 2px solid #C03027;
+border-radius: 20px;
+}
+.decouvrer{
+justify-content: center;
+text-align: center;
+
+}
+notre-texte{
+padding: 2%;
+}
+.dv-ht{
+display: flex;
+justify-content: space-between;
+}
+.notre-carte{
+margin-top: 30px;
+}
+.reserver{
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 50.5vh;
+background-image: url(images/la-réserve-paris-bibliothèque-grégoire-gardette-4-768x512.jpg.webp);
+}
+.reservation{
+color: #FFE747;
+margin-left: 30px;
+margin-top: 200px;
+}
+.maintenant{
+display: flex;
+justify-content: space-between;
+}
+.une-table{
+color: white;
+margin-left: 30px;
+}
+.sub-main{
+margin-right: 30px;
+background: #C03027;
+text-decoration: none;
+color: white;
+width: 300px;
+height: 60px;
+broder: 2px solid white;
+}
+.sub-main:hover{
+background-color: #FFE747;
+color: white;
+text-decoration: none;
+border: 2px solid white;
+}
+.jeter{
+color: white;
+margin-left: 30px;
+}
+.galerie{
+display: flex;
+justify-content: space-between;
+}
+.centration{
+justify-content: center;
+text-align: center;
+}
+.bmw{
+color: white;
+background-color: #C03027;
+width: 260px;
+margin-left: 530px;
+margin-top: 50px;
+border: 2px solid #C03027;
+border-radius: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+.testimonial-container,
+.testimonial-ghost-container {
+  width: 22rem;
+  height: 28rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: absolute;
+}
+.testimonial-active {
+  z-index: 1;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2), 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
+}
+
+.testimonial-header,
+.testimonial-ghost-header {
+  height: 10rem;
+  background-image: linear-gradient(
+      to right,
+      rgba(239, 124, 0, 0.8),
+      rgba(255, 181, 102, 0.8)
+    ), url("https://shorturl.at/grwP6");
+  background-size: cover;
+  background-position: cover;
+}
+.testimonial-avatar,
+.testimonial-ghost-body img {
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  margin-top: -4rem;
+  border: 0.5rem solid #fff;
+  z-index: 100;
+}
+
+.testimonial-body,
+.testimonial-ghost-body {
+  padding: 0 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.testimonial-ghost-header {
+  background-image: linear-gradient(
+      to right,
+      rgba(119, 119, 119, 0.8),
+      rgba(119, 119, 119, 0.8)
+    ), url("https://shorturl.at/grwP6");
+}
+
+.testimonial-ghost-body img {
+  filter: blur(2px);
+}
+
+.testimonial-ghost-body h1,
+.testimonial-ghost-body p i,
+.testimonial-ghost-footer button i,
+.testimonial-ghost-footer span i {
+  color: #777;
+}
+
+.testimonial-footer,
+.testimonial-ghost-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.testimonial-active-animated {
+  animation: moveRight 1.5s ease-in-out;
+}
+
+.testimonial-inactive-animated {
+  animation: moveLeft 1.5s ease-in-out;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+    box-shadow: none;
+  }
+  50% {
+    transform: translateX(-10rem);
+    box-shadow: none;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 2;
+  }
+  50% {
+    transform: translateX(18rem) scale(0.96);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0) scale(0.98);
+    opacity: 0.2;
+  }
+.terminator{
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 90.5vh;
+background-image: url(images/la-réserve-paris-bibliothèque-grégoire-gardette-4-768x512.jpg.webp);
+}
+.formulaire{
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+width: 100%;
+height: 90.5vh;
+background-image: url(images/la-réserve-paris-bibliothèque-grégoire-gardette-4-768x512.jpg.webp);
+margin-top: 40px;
+}
+
+.moins{
+height: 10vh;
+}
+.yokou{
+height: 10vh;
+}
+.frimer{
+display: flex;
+justify-content: space-between;
+}
+</style>
+<div class="menu">
+    <div class="load"></div>
+    <div class="content">
+<div class="heads">
+    <div class="head-gauche">
+        <p class="head"><i class="icon-phone-sign"></i>Phone: +221 781343142</p>
+    </div>
+    <div class="head-droite">
+        <i></i>
+        <p>Opening Hours: Lun-Sam  08h-22h</p>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img th:src="@{images/img.png}" class="logo"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="acc">
+                        Accueil</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Catalogue</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Produits
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" >Ajouter</a></li>
+                        <li><a class="dropdown-item" href="#">Listes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorie
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" >Ajouter</a></li>
+                        <li><a class="dropdown-item">Listes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Utilisateurs
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Ajouter</a></li>
+                        <li><a class="dropdown-item" href="#">Listes</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <button class="btn btn-outline-white me-2" type="submit">Se connecter</button>
+                <button class="btn btn-white" type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+</nav>
+    <div class="disp">
+        <div><p class="phones">Phone: +221 781343142</p></div>
+        <div class="dep">
+            <div class="titre"><h1 class="sen">SENEGALESE DELICIOUS FOOD</h1></div>
+            <div><p class="text">Lorem ipsum do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+            <div class="flexable">
+                <button class="bouton-haut">Order now</button>
+                <button class="bouton-bas">Our Menu</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Notre restaurant -->
+<div class="divi">
+    <div class="sey">
+        <p class="color">WE ARE</p>
+        <h1 class="tit">The Food Resturant</h1>
+        <p class="lore">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br/>
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo.<br/>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elie.</p>
+        <button class="bnt">VOIR PLUS</button>
+    </div>
+    <div class="droit">
+        <div class="min">
+            <div class="imas">
+                <img th:src="@{images/part1.jpeg}" class="image"/>
+                <img th:src="@{images/part2.jpeg}" class="image"/>
+            </div>
+            <!-- animation -->
+            <div class="ima">
+                <img th:src="@{images/burger-maison.jpeg}" class="image"/>
+
+                <img th:src="@{images/comment-preparer-le-big-kahuna-burger-de-pulp-fiction.jpeg}" class="image"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Nos burgers  -->
+<div class="burgers">
+    <div class="just"><p class="justes">BUY 1 GET 1 FREE</p></div>
+    <div class="just"><h1 class="justin">NOS BURGERS</h1></div>
+    <!-- div haut -->
+    <div class="row dv-ht">
+        <div class="div-haut" id="letter">
+            <!-- div interne droite -->
+            <div class="div-interne-droite" th:each="b : ${burgers}">
+                <h4 class="vet" th:text="${b.nom}"></h4>
+                <!-- div interne droite premiere div -->
+                <div class="innert">
+                    <p th:text="${b.description}"></p>
+                    <p class="prix" th:text="${b.prix}"></p>
+                </div>
+                <!-- div interne droite deuxieme div -->
+                <div class="lin-det-aj">
+                    <a class="det" href="#">Détails</a>
+                    <a class="aj" href="#">Ajouter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nos Menus -->
+<div class="mens">
+    <div class="edit">
+        <p class="editer text-center">HOT SALES</p>
+    </div>
+    <div class="player">
+        <div class="text-center mareg">
+            <h1>NOS Menus</h1>
+        </div>
+        <div class="text-center">
+            <select>
+                <option>Selectionner</option>
+                <option>Par prix</option>
+                <option>Par etat</option>
+                <option>Par etat et par etat</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card">
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                   <div class="lien-lier">
+                       <a href="" class="but">
+                           Voir plus
+                       </a>
+                       <a href="" class="butn">
+                           Ajouter
+                       </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Notre carte -->
+<div class="container notre-carte">
+    <!-- Texte et titre -->
+    <div class="notre-texte">
+        <p class="tasty">TASTY & SPICY RECIPES</p>
+        <h3 class="decouvrer">Découvrez notre carte</h3>
+    </div>
+    <!-- Lien pour carte -->
+    <div class="naviguer">
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Menu</a>
+            <a href="#news">Burger</a>
+            <a href="#contact">Boisson</a>
+            <a href="#about">Frite</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 mt-3">
+            <div class="card" >
+                <img th:src="@{images/2219_243.png}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DELL Latitude
+                    </h5>
+                    <p class="card-text">250000 FCFA</p>
+                    <div class="lien-lier">
+                        <a href="" class="but">
+                            Voir plus
+                        </a>
+                        <a href="" class="butn">
+                            Ajouter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Réserver dés maintenant -->
+<div class="reserver">
+    <div class="reservation"><h1>RESERVATION</h1></div>
+    <div class="maintenant">
+        <h3 class="une-table">Réservez une table maintenant !</h3>
+        <button type="submit" class="sub-main">Réserver maintenant</button>
+    </div>
+    <div>
+        <p class="jeter"><i class="icon-phone-sign"></i> +221 78-134-31-42</p>
+    </div>
+</div>
+<!-- Notre galerie -->
+<div class="container">
+    <div class="row">
+        <div class="centration">
+            <p class="text-center bmw">DELICIOUS FOOD GALLERY</p>
+            <h2 class="text-center">NOTRE GALERIE</h2>
+        </div>
+        <div class="galerie">
+            <div><img th:src="@{images/burger-maison.jpeg}" class="card-img-top" alt="..."></div>
+            <div><img th:src="@{images/burger_flickr_6870386851_9fec857cec_b.webp}" class="card-img-top" alt="..."></div>
+            <div><img th:src="@{images/2219_243.png}" class="card-img-top" alt="..."></div>
+        </div>
+    </div>
+</div>
+
+<!-- Témoignage -->
+<div class="terminator">
+    <div class="container" id="terminator">
+        <div class="row">
+            <main>
+                <!--This is the current testimonial-->
+                <div class="testimonial-container testimonial-active">
+                    <div class="testimonial-header"></div>
+                    <div class="testimonial-body">
+                        <img alt="Avatar" th:src="@{images/demba.jpg}" class="testimonial-avatar" />
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div>
+                            <span><i class="fab fa-google"></i></span>
+                            <span><i class="fab fa-linkedin"></i></span>
+                            <span><i class="fab fa-twitter"></i></span>
+                        </div>
+                        <div>
+                            <button id="next">
+                                <i class="fa fa-3x fa-chevron-circle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- deuxieme temoignage -->
+                <div class="testimonial-ghost-container">
+                    <div class="testimonial-ghost-header"></div>
+                    <div class="testimonial-ghost-body">
+                        <img alt="Avatar" th:src="@{images/demba.jpg}" />
+                        <h1></h1>
+                        <p></p>
+                    </div>
+                    <div class="testimonial-ghost-footer">
+                        <div>
+                            <span><i class="fab fa-google"></i></span>
+                            <span><i class="fab fa-linkedin"></i></span>
+                            <span><i class="fab fa-twitter"></i></span>
+                        </div>
+                        <div>
+                            <button id="ghost-next">
+                                <i class="fa fa-3x fa-chevron-circle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+<!-- Nos membres -->
+<div class="galerie">
+    <div ><img th:src="@{images/77343766-portrait-de-chef-cuisinier-sérieux-préparer-hamburger-dans-la-cuisine-commerciale.webp}" class="moins" alt="..."></div>
+    <div><img th:src="@{images/depositphotos_409279480-stock-photo-the-chef-prepares-a-burger.jpeg}" class="card-img-top" alt="..."></div>
+    <div class="yokou"><img th:src="@{images/téléchargement5.jpeg}" class="yokou" alt="..."></div>
+</div>
+<!-- Formulaire simple -->
+<div class="container formulaire">
+    <div class="row">
+        <form>
+            <div class="frimer">
+                <input type="text" placeholder="nom*" />
+                <input type="email" placeholder="email*" />
+                <input type="text" placeholder="Object*" />
+            </div>
+            <textarea placeholder="Message*"></textarea>
+            <div>
+                <button>Envoyer message</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Footer -->
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+const testimonialContainer = document.querySelector(".testimonial-container")
+const testimonialGhost = document.querySelector(".testimonial-ghost-container")
+const nextBtn = document.querySelector("#next")
+const testimonials = [
+  {
+    name: "Sarah Drucker",
+    text:
+      "Working with John Doe was a real pleasure, he helps me extending my business online.",
+    avatar: "https://shorturl.at/eqyGW",
+  },
+  {
+    name: "Nicolas Jaylen",
+    text:
+      "My business was broken, then i start working with John Doe, and now everything works fine.",
+    avatar: "https://shorturl.at/ptC58",
+  },
+  {
+    name: "Awa Fall",
+    text:
+      "John Doe helps me a lot from designing my website to make it live in just 5 weeks.",
+    avatar: "https://shorturl.at/lwBY1",
+  },
+]
+let counter = 0;
+
+const handleFirstTestimonial = () => {
+  // Author avatar selection
+  testimonialContainer.children[1].children[0].src = testimonials[0].avatar
+  // Testimonial Author selection
+  testimonialContainer.children[1].children[1].innerHTML = testimonials[0].name
+  // Testimonial text selection
+  testimonialContainer.children[1].children[2].innerHTML = `
+  <i class="fas fa-quote-left"></i>
+  ${testimonials[0].text}
+  <i class="fas fa-quote-right"></i>
+  `
+}
+
+const activeTestimonial = () => {
+  testimonialContainer.classList.add("testimonial-active-animated")
+  // Author avatar selection
+  testimonialContainer.children[1].children[0].src =
+    testimonials[counter].avatar
+  // Testimonial Author selection
+  testimonialContainer.children[1].children[1].innerHTML =
+    testimonials[counter].name
+  // Testimonial text selection
+  testimonialContainer.children[1].children[2].innerHTML = `<i class="fas fa-quote-left"></i>
+  ${testimonials[counter].text}
+  <i class="fas fa-quote-right"></i>`
+
+  setTimeout(() => {
+    // Remove the active animated class
+    testimonialContainer.classList.remove("testimonial-active-animated")
+  }, 1400)
+}
+const inactiveTestimonial = () => {
+  testimonialGhost.classList.add("testimonial-inactive-animated")
+  let newCounter = counter
+  if (newCounter === 0) {
+    newCounter = testimonials.length
+  }
+  // image selection
+  testimonialGhost.children[1].children[0].src =
+    testimonials[newCounter - 1].avatar
+  // title selection
+  testimonialGhost.children[1].children[1].innerHTML =
+    testimonials[newCounter - 1].name
+  // text selection
+  testimonialGhost.children[1].children[2].innerHTML = `<i class="fas fa-quote-left"></i>
+  ${testimonials[newCounter - 1].text}
+  <i class="fas fa-quote-right"></i>`
+  setTimeout(() => {
+    // Remove the active animated class
+    testimonialGhost.classList.remove("testimonial-inactive-animated")
+  }, 1400)
+}
+
+nextBtn.addEventListener("click", () => {
+  if (counter === testimonials.length - 1) {
+    counter = 0
+    inactiveTestimonial()
+    activeTestimonial()
+  } else {
+    counter++
+    inactiveTestimonial()
+    activeTestimonial()
+  }
+})
+
+handleFirstTestimonial();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
